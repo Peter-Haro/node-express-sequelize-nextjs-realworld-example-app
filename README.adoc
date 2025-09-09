@@ -15,6 +15,13 @@ Includes <<database-migrations>>, <<test-js,DB and API unit testing>>, <<generat
 
 This is a branch of https://github.com/Peter-Haro/node-express-sequelize-realworld-example-app rebased on top of the `master` branch of that repository, we show it in a separate GitHub repository just to give it more visibility.
 
+
+This Full Stack app is part of the [RealWorld](https://github.com/gothinkster/realworld) project.
+
+You might also check my [Laravel version](https://github.com/Peter-Haro/laravel-real-example) of this app.
+You might also check my [Ruby on Rails version](https://github.com/Peter-Haro/ruby-on-rails-realworld-example-app) of this app.
+
+
 Ideally we would like to have both demos on the same tree as they share all backend code, but Next.js and NPM impose too many restrictions which we don't have the time to work around.
 
 The frontend part of this repository is a fork of https://github.com/reck1ess/next-realworld-example-app/tree/66003772a42bf71c7b2771119121d4c9cf4b07d4 which was SSR only via API, not SSG/ISG.
