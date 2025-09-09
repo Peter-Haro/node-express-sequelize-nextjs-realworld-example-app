@@ -13,7 +13,7 @@ Got it running on Heroku as of April 2021 at https://cirosantilli-realworld-next
 
 Includes <<database-migrations>>, <<test-js,DB and API unit testing>>, <<generate-demo-data,DB seeding>>, and <<linting>> setups.
 
-This is a branch of https://github.com/cirosantilli/node-express-sequelize-realworld-example-app rebased on top of the `master` branch of that repository, we show it in a separate GitHub repository just to give it more visibility.
+This is a branch of https://github.com/Peter-Haro/node-express-sequelize-realworld-example-app rebased on top of the `master` branch of that repository, we show it in a separate GitHub repository just to give it more visibility.
 
 Ideally we would like to have both demos on the same tree as they share all backend code, but Next.js and NPM impose too many restrictions which we don't have the time to work around.
 
@@ -144,10 +144,10 @@ psql realworld_next
 
 == Heroku deployment
 
-The setup is analogous to: https://github.com/cirosantilli/node-express-sequelize-realworld-example-app#heroku-deployment but instead of `heroku git:remote -a cirosantilli-realworld-express` you should use:
+The setup is analogous to: https://github.com/Peter-Haro/node-express-sequelize-realworld-example-app#heroku-deployment but instead of `heroku git:remote -a cirosantilli-realworld-express` you should use:
 
 ....
-git remote add heroku-next https://git.heroku.com/cirosantilli-realworld-next.git
+git remote add heroku-next https://github.com/Peter-Haro/node-express-sequelize-nextjs-realworld-example-app.git
 ./heroku.sh addons:create --app cirosantilli-realworld-next heroku-postgresql:hobby-dev
 ./heroku.sh config:set --app cirosantilli-realworld-next SECRET="$(tr -dc A-Za-z0-9 </dev/urandom | head -c 256)"
 # Optional. If set, enables demo mode. We must use the NEXT_PUBLIC_* prefix for the variable name,
@@ -366,7 +366,7 @@ Use a markdown sanitizer, the `marked` library `sanitize` option was deprecated.
 
 == Known divergences
 
-We aim to make this website look exactly like https://github.com/gothinkster/angular-realworld-example-app/tree/9e8c49514ee874e5e0bbfe53ffdba7d2fd0af36f pixel by pixel which we call "our reference implementation, and have the exact same DOM tree as much as possible, although that is hard because Angular adds a gazillion of fake nodes to the DOM it seems.
+I aim to make this website look exactly like https://github.com/gothinkster/angular-realworld-example-app/tree/9e8c49514ee874e5e0bbfe53ffdba7d2fd0af36f pixel by pixel which we call "our reference implementation, and have the exact same DOM tree as much as possible, although that is hard because Angular adds a gazillion of fake nodes to the DOM it seems.
 
 We test this by running this front/backend, and then also running angular in another browser tab. We then switch between browser tabs quickly back and forth which allows us to see even very small divergences on the UI.
 
@@ -564,7 +564,7 @@ npm run format
 
 Rationale for some rules we've disabled:
 
-* `@next/next/no-img-element`: Next insist that you whitelist servers, which is only possible if we implement profile picture upload: https://github.com/cirosantilli/node-express-sequelize-nextjs-realworld-example-app/issues/16 We will actually do this at some point.
+* `@next/next/no-img-element`: Next insist that you whitelist servers, which is only possible if we implement profile picture upload: https://github.com/Peter-Haro/node-express-sequelize-nextjs-realworld-example-app/issues/16 We will actually do this at some point.
 * `import/no-anonymous-default-export`: what's the point??? It just duplicates module names as pointed in comments. https://stackoverflow.com/questions/64729264/how-can-i-get-rid-of-the-warning-import-no-anonymous-default-export-in-react
 
 == Testing
