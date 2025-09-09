@@ -9,7 +9,6 @@
 :toclevels: 6
 :toc-title:
 
-Got it running on Heroku as of April 2021 at https://cirosantilli-realworld-next.herokuapp.com/
 
 Includes <<database-migrations>>, <<test-js,DB and API unit testing>>, <<generate-demo-data,DB seeding>>, and <<linting>> setups.
 
